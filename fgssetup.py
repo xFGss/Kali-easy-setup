@@ -34,6 +34,11 @@ def mainpage():
         os.system("sudo apt install -y zsh")
         os.system("sudo apt install -y fastfetch")
         os.system("wget -O ~/.zshrc https://github.com/xFGss/Kali-easy-setup/releases/download/v1.0/zshrc.backup.2025-09-19-2354")
+        os.system("wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip \
+&& cd ~/.local/share/fonts \
+&& unzip FiraCode.zip \
+&& rm FiraCode.zip \
+&& fc-cache -fv")
         escolhareboot = input(Fore.YELLOW + "Installation Completed, Reboot now? (y/n): ")
         if escolhareboot.lower() == "y":
             os.system("reboot")
